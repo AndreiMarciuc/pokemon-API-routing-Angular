@@ -4,17 +4,21 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-
+import { PokeComponent } from './poke/poke.component';
+import { PokeService } from './poke.service';
+import {HttpModule} from '@angular/http'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PokeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [PokeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
